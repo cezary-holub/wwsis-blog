@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class PostTest {
 
-	Post p = new Post("testowy tytul", "testowa tresc");
+	Post p = new Post("test title", "test content");
 	
 	@Test
 	public void newPostShouldHaveEmptyListOfComments() {
@@ -24,7 +24,7 @@ public class PostTest {
 	
 	@Test
 	public void addComment_shouldLinkCommentToThePost() {
-		Comment comment = new Comment("tester", "testowy komentarz");
+		Comment comment = new Comment("tester", "test comment");
 		p.addComment(comment);
 		
 		assertEquals(1, p.getComments().size());
@@ -36,7 +36,7 @@ public class PostTest {
 		List<Comment> comments = p.getComments();
 		
 		try {
-			comments.add(new Comment("tester", "testowy komentarz")); // niedozwolone, komentarze można dodać tylko metodą addComment klasy Post
+			comments.add(new Comment("tester", "test comment")); // not allowed, comments can only be added using the addComment method of the Post class
 			fail("exception was expected!");
 		} catch (Exception e) {
 			// ok

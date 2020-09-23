@@ -10,7 +10,7 @@ import java.util.Collection;
 
 public class PostSpecificationTest {
 
-	PostApi post = new Post1("testowy tytul", "testowy tekst"); // podmień na Post2, Post3 itd. aby przetestować pozostałe implementacje
+	PostApi post = new Post1("test title", "test text"); // replace with Post2, Post3 etc. to test other implementations
 	
-	// TODO zaimplementuj testy
+	// TODO implement the JUnit tests
 }
